@@ -1,0 +1,259 @@
+@import "tailwindcss";
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fffbff;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    height: 90%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+.right{
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.left{
+    margin: 50;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E8F3FC;
+}
+
+.right img{
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+}
+
+form {
+    padding-top: 5px;
+    margin-left: 20px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    gap: 1rem;
+}
+
+form button{
+        width: 98%;
+        padding: 7px;
+        margin-top: 5px;
+        background-color: #156BB7;
+        color: white;
+        border: none;
+        border-radius: 7px;
+        cursor: pointer;
+        transition: 0.3s;
+}
+
+
+input {
+    padding: 7px;
+    border: 1px solid #dad7cd;
+    border-radius: 7px;
+    width: 95%;
+}
+
+label{
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.chk {
+    width: 97%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 10px;
+    font-size: 0.4rem;
+    color: #343a40;
+}
+
+.chk input[type="checkbox"] {
+    background-color: transparent;
+    border: 1px solid #dad7cd;
+    border-radius: 4px;
+    cursor: pointer;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    position: relative;
+}
+
+.chk input[type="checkbox"]:checked {
+    background-color: #1C80DC;
+    border-color: #1C80DC;
+}
+
+.chk input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 6px;
+    width: 4px;
+    height: 8px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}    
+
+.chk label {
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.right a {
+    margin-left: auto;
+    text-decoration: none;
+    color: #156BB7;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.right a:hover {
+    color: #0d4a8c;
+}
+
+/*.soc button{
+    width: 45%;
+    padding: 7px;
+    border: 1px solid #dad7cd;
+    border-radius: 7px;
+    background-color: transparent;
+    color: #000;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 20px;
+}*/
+
+.soc {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 20px;
+}
+
+.soc button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 10px 15px;
+    border: 1px solid #dad7cd;
+    border-radius: 7px;
+    background-color: transparent;
+    color: #000;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+
+.soc svg {
+    width: 20px;
+    height: 20px;
+}
+
+p {
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: #343a40;
+    transition: 0.3s;
+}
+
+a:hover{
+    color: #6c757d;
+}
+
+.wellcome{
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+input:focus {
+    outline: none;
+    border: #1C80DC; 
+    box-shadow: 0 0 3px #1C80DC; 
+}
+
+/*dark mode*/
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #051B2E;
+        color: #fff;
+    }
+    .container {
+        background-color: #051B2E;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+    .left {
+        background-image: linear-gradient(to top , #1C80DC, #222222);
+    }
+    .right {
+        background-color: #051B2E;
+    }
+    input {
+        background-color: transparent;
+        color: #fff;
+        border: 1px solid #dad7cd;
+    }
+    input:focus {
+        outline: none;
+        border-color: #1C80DC; 
+        box-shadow: 0 0 5px #1C80DC; 
+    }
+    label {
+        color: white;
+    }
+    form button {
+        background-image: linear-gradient(to right,#222222, #1C80DC);
+        color: white;
+    }
+    .soc button{
+        background-color: transparent;
+        color: #fff;
+    }
+    button:hover{
+        box-shadow: rgba(196, 231, 252, 0.2) 0px 2px 8px 0px;
+    }
+    input:focus {
+        outline: none;
+        border-color: #1C80DC; 
+        box-shadow: 0 0 5px #1C80DC; 
+    }
+}
